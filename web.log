@@ -1,0 +1,55 @@
+{"level":"DEBUG","time":"2022-05-01T12:14:11.019+0800","caller":"Web/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-01T13:16:34.146+0800","caller":"Web/main.go:71","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-01T13:21:02.504+0800","caller":"Web/main.go:35","msg":"logger init success"}
+{"level":"ERROR","time":"2022-05-01T13:21:02.530+0800","caller":"mysql/main.go:21","msg":"connect DB failed","error":"dial tcp: lookup tcp/%!d(string=3306): nodename nor servname provided, or not known"}
+{"level":"DEBUG","time":"2022-05-01T13:23:43.383+0800","caller":"Web/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-01T13:26:08.577+0800","caller":"Web/main.go:71","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-01T13:26:11.410+0800","caller":"Web/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-01T13:26:44.312+0800","caller":"logger/main.go:66","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36","errors":"","cost":0.000109875}
+{"level":"INFO","time":"2022-05-01T13:26:49.711+0800","caller":"logger/main.go:66","msg":"/version","status":200,"method":"GET","path":"/version","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36","errors":"","cost":0.000101375}
+{"level":"INFO","time":"2022-05-01T13:26:59.955+0800","caller":"logger/main.go:66","msg":"/version","status":200,"method":"GET","path":"/version","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36","errors":"","cost":0.000030084}
+{"level":"INFO","time":"2022-05-01T13:31:48.972+0800","caller":"Web/main.go:71","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-01T13:31:55.507+0800","caller":"Web/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-01T13:33:26.601+0800","caller":"logger/main.go:66","msg":"/version","status":200,"method":"GET","path":"/version","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36","errors":"","cost":0.000265167}
+{"level":"DEBUG","time":"2022-05-02T20:00:33.938+0800","caller":"Web/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-02T20:00:52.803+0800","caller":"logger/main.go:66","msg":"/version","status":200,"method":"GET","path":"/version","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36","errors":"","cost":0.00019875}
+{"level":"INFO","time":"2022-05-02T20:00:52.894+0800","caller":"logger/main.go:66","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36","errors":"","cost":0.000000542}
+{"level":"INFO","time":"2022-05-02T20:03:30.740+0800","caller":"Web/main.go:71","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-02T20:15:09.431+0800","caller":"Goi/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-02T21:11:34.318+0800","caller":"Goi/main.go:71","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-02T21:12:52.075+0800","caller":"Goi/main.go:39","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:03:08.788+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:06:24.635+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:06:39.970+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-03T13:08:46.022+0800","caller":"Goi/main.go:85","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-03T13:08:49.797+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:11:42.946+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:12:28.324+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:14:38.951+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:15:30.308+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:17:06.259+0800","caller":"Goi/main.go:42","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-03T13:23:23.810+0800","caller":"Goi/main.go:85","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-03T13:23:26.755+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:25:32.720+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:26:32.564+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:27:02.674+0800","caller":"Goi/main.go:42","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-03T13:31:19.223+0800","caller":"Goi/main.go:86","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-03T13:31:22.287+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T13:44:52.571+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T14:02:14.943+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-03T14:20:10.917+0800","caller":"Goi/main.go:86","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-03T14:20:13.479+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-03T14:21:06.532+0800","caller":"Goi/main.go:86","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-03T14:21:09.084+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T14:32:03.940+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-03T18:55:31.632+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-03T19:15:41.971+0800","caller":"Goi/main.go:86","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-03T19:15:45.524+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-03T19:20:16.600+0800","caller":"logger/main.go:66","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000842208}
+{"level":"INFO","time":"2022-05-03T19:25:37.597+0800","caller":"logger/main.go:66","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000217916}
+{"level":"INFO","time":"2022-05-03T19:25:41.434+0800","caller":"logger/main.go:66","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000055125}
+{"level":"INFO","time":"2022-05-03T19:25:42.173+0800","caller":"logger/main.go:66","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000147833}
+{"level":"INFO","time":"2022-05-03T19:26:01.716+0800","caller":"Goi/main.go:86","msg":"Shutdown Server ..."}
+{"level":"DEBUG","time":"2022-05-03T19:26:04.393+0800","caller":"Goi/main.go:43","msg":"logger init success"}
+{"level":"ERROR","time":"2022-05-03T19:26:13.707+0800","caller":"controller/user.go:22","msg":"Sign up with invalid param"}
+{"level":"INFO","time":"2022-05-03T19:26:13.707+0800","caller":"logger/main.go:66","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000591917}
