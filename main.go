@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Goi/controller"
 	"Goi/dao/mysql"
 	"Goi/dao/redis"
 	"Goi/logger"
@@ -55,11 +56,16 @@ func main() {
 	defer redis.Close()
 
 	// ❄️雪花算法生成随机ID
-	// if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
 	if err := snowflake.Init(settings.Conf.SnowFlakeConfig.StartTime, settings.Conf.SnowFlakeConfig.MachineID); err != nil {
 		fmt.Printf("init snowflake failed, err:%v\n", err)
 		return
 	}
+
+	// 初始化 gin 框架内置的校验器使用的翻译器
+	if err := controller.InitTrans("zh"); err != nil {
+		fmt.Printf("init validator trans failed, err: %v \n", err)
+	}
+
 	// 5. 注册路由
 	r := routes.Setup()
 	// 6. 启动服务（优雅关机）
