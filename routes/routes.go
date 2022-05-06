@@ -26,5 +26,15 @@ func Setup() *gin.Engine {
 		c.String(http.StatusOK, viper.GetString("app.version"))
 	})
 
+	r.GET("/ping", func(c *gin.Context) {
+		// 如果是登陆的用户
+		if isLogin {
+			c.String(http.StatusOK, "pong")
+		} else {
+			// 否则就直接返回请登录
+			c.String(http.StatusOK, "请登录")
+		}
+	})
+
 	return r
 }

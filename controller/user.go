@@ -1,8 +1,10 @@
 package controller
 
 import (
+	"Goi/dao/mysql"
 	"Goi/logic"
 	"Goi/models"
+	"errors"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
@@ -44,16 +46,15 @@ func SignUpHandler(c *gin.Context) {
 
 	// 3. 返回响应
 	if err != nil {
-		c.JSON(http.StatusOK, gin.H{
-			"status": "fail",
-			"msg":    "注册失败",
-			"info":   err.Error(),
-		})
+		zap.L().Error("logic.SignUp failed", zap.Error(err))
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+			return
+		}
+		ResponseError(c, CodeServerBusy)
+		return
 	} else {
-		c.JSON(http.StatusOK, gin.H{
-			"status": "success",
-			"info":   "注册成功！",
-		})
+		ResponseSuccess(c, nil)
 	}
 
 }
@@ -70,18 +71,10 @@ func LoginHandler(c *gin.Context) {
 		// 判断 err 是不是 validator.ValidationErrors 类型
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"status": "fail",
-				"msg":    err.Error(),
-			})
-			return
-		} else {
-			c.JSON(http.StatusOK, gin.H{
-				"status": "fail",
-				"msg":    removeTopStruct(errs.Translate(trans)), // 翻译错误
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans))) // 翻译错误
 		return
 	}
 	// 2. 业务逻辑处理
@@ -90,15 +83,14 @@ func LoginHandler(c *gin.Context) {
 	// 3. 返回响应
 	if err != nil {
 		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"status": "fail",
-			"msg":    "用户名或密码错误",
-		})
-	} else {
-		c.JSON(http.StatusOK, gin.H{
-			"status": "success",
-			"msg":    "登陆成功",
-		})
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExist)
+			return
+		}
+		ResponseError(c, CodeServerBusy)
+		return
 	}
+	ResponseSuccess(c, nil)
+	return
 
 }

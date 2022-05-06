@@ -1,13 +1,23 @@
-# Web
+# Goi
 
-Go Web 通用脚手架 Go Web Common Scaffold
+A forum based on Go & Vue
+一个基于 Go & Vue 的论坛 
 
-Go Web Common Project Templates
+Usage:
+
+- Run Locally:
+```shell
+go run main.go
+```
+- Build and Deploy:
+```shell
+go build
+```
 
 Structure:
 Web
  - conf: 配置文件
- - controllers: 处理请求的函数
+ - controllers: 请求参数的获取和校验
  - dao: 数据库的一些操作
  - logger: 日志
  - logic: 业务逻辑
