@@ -26,3 +26,4 @@ Web
  - routes: 路由
  - settings: 配置相关函数
  - main.go: 主程序
+ - air: 使用Air实现Go程序实时热重载

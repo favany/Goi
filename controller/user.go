@@ -11,6 +11,8 @@ import (
 	"net/http"
 )
 
+const CtxUserIDKey = "userID"
+
 // 参数校验
 
 // SignUpHandler 处理注册请求的函数
