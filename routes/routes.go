@@ -3,6 +3,7 @@ package routes
 import (
 	"Goi/controller"
 	"Goi/logger"
+	"Goi/middlewares"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
 	"net/http"
@@ -26,8 +27,11 @@ func Setup() *gin.Engine {
 		c.String(http.StatusOK, viper.GetString("app.version"))
 	})
 
-	r.GET("/ping", func(c *gin.Context) {
-		// 如果是登陆的用户
+	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
+
+		isLogin := true
+		// 如果是登陆的用户，判断请求头中是否有有效的JWT
+		c.Request.Header.Get("Authorization")
 		if isLogin {
 			c.String(http.StatusOK, "pong")
 		} else {

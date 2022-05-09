@@ -3,6 +3,7 @@ package logic
 import (
 	"Goi/dao/mysql"
 	"Goi/models"
+	"Goi/pkg/jwt"
 	"Goi/pkg/snowflake"
 	"crypto/md5"
 	"encoding/hex"
@@ -40,10 +41,15 @@ func SignUp(p *models.ParamSignUp) (err error) {
 	return
 }
 
-func Login(p *models.ParamLogin) error {
+func Login(p *models.ParamLogin) (token string, err error) {
 	user := &models.User{
 		Username: p.Username,
 		Password: encryptPassword(p.Password),
 	}
-	return mysql.Login(user)
+	// 传递的是指针，就能拿到user.UserID
+	if err = mysql.Login(user); err != nil {
+		return "", err
+	}
+	// 生成JWT
+	return jwt.GenToken(user.UserID, user.Username)
 }

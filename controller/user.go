@@ -78,7 +78,7 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 	// 2. 业务逻辑处理
-	err = logic.Login(p)
+	token, err := logic.Login(p)
 
 	// 3. 返回响应
 	if err != nil {
@@ -90,7 +90,7 @@ func LoginHandler(c *gin.Context) {
 		ResponseError(c, CodeServerBusy)
 		return
 	}
-	ResponseSuccess(c, nil)
+	ResponseSuccess(c, token)
 	return
 
 }

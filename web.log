@@ -183,3 +183,5 @@
 {"level":"INFO","time":"2022-05-04T14:46:11.220+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.003727125}
 {"level":"DEBUG","time":"2022-05-06T11:06:11.275+0800","caller":"Goi/main.go:44","msg":"logger init success"}
 {"level":"INFO","time":"2022-05-06T11:06:27.458+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.09054775}
+{"level":"DEBUG","time":"2022-05-09T10:46:20.356+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-09T10:46:58.799+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.079838}
