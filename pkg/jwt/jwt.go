@@ -2,13 +2,14 @@ package jwt
 
 import (
 	"errors"
-	"github.com/golang-jwt/jwt"
+	"fmt"
 	"time"
+
+	"github.com/golang-jwt/jwt"
+	"github.com/spf13/viper"
 )
 
-const TokenExpireDuration = time.Hour * 2 // 定义 Token 过期时间 2 个小时
-
-var mySecret = []byte("Smart")
+var mySecret = []byte("jwt")
 
 func keyFunc(_ *jwt.Token) (i interface{}, err error) {
 	return mySecret, nil
@@ -19,20 +20,18 @@ func keyFunc(_ *jwt.Token) (i interface{}, err error) {
 // 如果想要保存更多信息，都可以添加到这个结构体中
 
 type MyClaims struct {
-	UserID   int64  `json:"user_id"`
-	Username string `json:"username"`
+	UserID int64 `json:"user_id"`
 	jwt.StandardClaims
 }
 
-// GenToken 生成JWT
-func GenToken(userID int64, username string) (string, error) {
-	// 创建一个我们自己的声明
+func GenToken(userID int64) (string, error) {
+	// 创建一个我们自己的声明的数据
 	c := MyClaims{
-		userID, // 自定义字段
-		"username",
+		userID,
 		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
-			Issuer:    "Goi",                                      // 签发人
+			ExpiresAt: time.Now().Add(
+				time.Duration(viper.GetInt("auth.jwt_expire")) * time.Hour).Unix(), // 过期时间
+			Issuer: "jwt", // 签发人
 		},
 	}
 	// 使用指定的签名方法创建签名对象
@@ -45,12 +44,12 @@ func GenToken(userID int64, username string) (string, error) {
 func ParseToken(tokenString string) (*MyClaims, error) {
 	// 解析token
 	var mc = new(MyClaims)
-	token, err := jwt.ParseWithClaims(tokenString, mc, func(token *jwt.Token) (i interface{}, err error) {
-		return mySecret, nil
-	})
+	token, err := jwt.ParseWithClaims(tokenString, mc, keyFunc)
 	if err != nil {
+		fmt.Println(err.Error())
 		return nil, err
 	}
+	fmt.Println(token)
 	// 校验token
 	if token.Valid {
 		return mc, nil
@@ -72,7 +71,7 @@ func RefreshToken(aToken, rToken string) (newAToken, newRToken string, err error
 
 	// 当access token是过期错误 并且 refresh token没有过期时就创建一个新的access token
 	if v.Errors == jwt.ValidationErrorExpired {
-		token, _ := GenToken(claims.UserID, claims.Username)
+		token, _ := GenToken(claims.UserID)
 		return token, "", nil
 	}
 	return

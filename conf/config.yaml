@@ -10,6 +10,8 @@ log:
   max_age: 30
   max_backups: 7
   log_mode: "dev"
+auth:
+  jwt_expire: 8760
 mysql:
   host: "127.0.0.1"
   port: 3306

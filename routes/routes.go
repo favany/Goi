@@ -13,32 +13,27 @@ func Setup() *gin.Engine {
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
+	v1 := r.Group("/api/v1")
+
 	// 连通测试
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "ok")
 	})
 
 	// 注册业务路由
-	r.POST("/signup", controller.SignUpHandler)
+	v1.POST("/signup", controller.SignUpHandler)
 	// 登陆业务路由
-	r.POST("/login", controller.LoginHandler)
+	v1.POST("/login", controller.LoginHandler)
+
+	v1.Use(middlewares.JWTAuthMiddleware()) // 应用JWT认证中间件
 
 	r.GET("/version", func(c *gin.Context) {
 		c.String(http.StatusOK, viper.GetString("app.version"))
 	})
 
-	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
-
-		isLogin := true
-		// 如果是登陆的用户，判断请求头中是否有有效的JWT
-		c.Request.Header.Get("Authorization")
-		if isLogin {
-			c.String(http.StatusOK, "pong")
-		} else {
-			// 否则就直接返回请登录
-			c.String(http.StatusOK, "请登录")
-		}
-	})
+	{
+		v1.GET("/community", controller.CommunityHandler)
+	}
 
 	return r
 }

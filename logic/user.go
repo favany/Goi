@@ -51,5 +51,5 @@ func Login(p *models.ParamLogin) (token string, err error) {
 		return "", err
 	}
 	// 生成JWT
-	return jwt.GenToken(user.UserID, user.Username)
+	return jwt.GenToken(user.UserID)
 }
