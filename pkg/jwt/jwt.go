@@ -2,7 +2,6 @@ package jwt
 
 import (
 	"errors"
-	"fmt"
 	"time"
 
 	"github.com/golang-jwt/jwt"
@@ -46,10 +45,8 @@ func ParseToken(tokenString string) (*MyClaims, error) {
 	var mc = new(MyClaims)
 	token, err := jwt.ParseWithClaims(tokenString, mc, keyFunc)
 	if err != nil {
-		fmt.Println(err.Error())
 		return nil, err
 	}
-	fmt.Println(token)
 	// 校验token
 	if token.Valid {
 		return mc, nil
