@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7ada1ca-84d5-4b92-90a3-6f83621231e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/vote.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/redis/keys.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/redis/vote.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/vote.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/vote.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/air_errors.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/air_errors.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web.log" beforeDir="false" afterPath="$PROJECT_DIR$/web.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -323,3 +323,49 @@
 {"level":"DEBUG","time":"2022-05-11T16:32:11.219+0800","caller":"Goi/main.go:44","msg":"logger init success"}
 {"level":"DEBUG","time":"2022-05-11T16:41:06.517+0800","caller":"Goi/main.go:44","msg":"logger init success"}
 {"level":"DEBUG","time":"2022-05-11T16:48:15.248+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T10:50:54.778+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T10:53:59.956+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T10:56:50.738+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T10:57:01.131+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:01:20.506+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:03:56.032+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:03:57.497+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:04:01.903+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:05:34.818+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:08:32.942+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:23:03.732+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:24:45.708+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:25:02.373+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:43:29.000+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:44:45.445+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:45:46.057+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T11:46:37.110+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-12T11:49:59.075+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.004323083}
+{"level":"INFO","time":"2022-05-12T11:51:11.529+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000361708}
+{"level":"INFO","time":"2022-05-12T11:51:13.409+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000107583}
+{"level":"DEBUG","time":"2022-05-12T11:52:13.348+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-12T11:52:18.418+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000390917}
+{"level":"DEBUG","time":"2022-05-12T11:52:40.159+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-12T11:52:46.523+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000813584}
+{"level":"INFO","time":"2022-05-12T11:54:07.552+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000354958}
+{"level":"INFO","time":"2022-05-12T11:54:08.622+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.000106292}
+{"level":"INFO","time":"2022-05-12T11:55:55.127+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.00259925}
+{"level":"DEBUG","time":"2022-05-12T11:56:17.605+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"INFO","time":"2022-05-12T12:02:54.935+0800","caller":"logger/logger.go:77","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.003219042}
+{"level":"DEBUG","time":"2022-05-12T12:08:34.296+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T18:52:41.528+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T18:55:38.868+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T18:59:33.889+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T23:49:38.229+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T23:50:30.703+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-12T23:52:54.844+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:00:31.477+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:08:14.247+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:08:24.109+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:10:21.766+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:10:43.016+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:55:32.635+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:55:55.844+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:57:05.622+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:57:34.969+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-13T00:58:04.436+0800","caller":"Goi/main.go:44","msg":"logger init success"}

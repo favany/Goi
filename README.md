@@ -4,7 +4,8 @@ Go WEB backend system
 Go Web 后台系统
 
 Feature 特色:
-- Hot updates 热更新
+- 🚀 Swift Hot updates 疾速热更新
+- 🗄 Clear Project Structure 项目结构清晰
 
 Usage:
 - Install dependencies locally:
