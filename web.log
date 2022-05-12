@@ -320,3 +320,6 @@
 {"level":"INFO","time":"2022-05-11T16:07:21.561+0800","caller":"logger/logger.go:77","msg":"/api/v1/get_post_list/","status":200,"method":"GET","path":"/api/v1/get_post_list/","query":"pageNum=1&pageSize=2","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.03509225}
 {"level":"INFO","time":"2022-05-11T16:07:30.671+0800","caller":"logger/logger.go:77","msg":"/api/v1/get_post_list/","status":200,"method":"GET","path":"/api/v1/get_post_list/","query":"pageNum=1&pageSize=1","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.001496625}
 {"level":"INFO","time":"2022-05-11T16:07:35.427+0800","caller":"logger/logger.go:77","msg":"/api/v1/get_post_list/","status":200,"method":"GET","path":"/api/v1/get_post_list/","query":"pageNum=1&pageSize=2","ip":"127.0.0.1","user-agent":"apifox/1.0.0 (https://www.apifox.cn)","errors":"","cost":0.001513292}
+{"level":"DEBUG","time":"2022-05-11T16:32:11.219+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-11T16:41:06.517+0800","caller":"Goi/main.go:44","msg":"logger init success"}
+{"level":"DEBUG","time":"2022-05-11T16:48:15.248+0800","caller":"Goi/main.go:44","msg":"logger init success"}

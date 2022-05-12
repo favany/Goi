@@ -1,11 +1,23 @@
 # Goi
 
-A forum based on Go & Vue
-一个基于 Go & Vue 的论坛 
+Go WEB backend system
+Go Web 后台系统
+
+Feature 特色:
+- Hot updates 热更新
 
 Usage:
+- Install dependencies locally:
+```shell
+go mod tidy
+```
 
 - Run Locally:
+```shell
+# hot update
+air
+```
+or
 ```shell
 go run main.go
 ```

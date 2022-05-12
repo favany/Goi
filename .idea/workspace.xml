@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7ada1ca-84d5-4b92-90a3-6f83621231e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/post.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/mysql/post.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logic/post.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/post.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/request.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/request.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/mysql/community.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/mysql/community.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/mysql/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/mysql/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/community.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/community.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/jwt/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/jwt/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/air_errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/air_errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/air_errors.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web.log" beforeDir="false" afterPath="$PROJECT_DIR$/web.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
