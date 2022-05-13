@@ -2,6 +2,7 @@ package logic
 
 import (
 	"Goi/dao/mysql"
+	"Goi/dao/redis"
 	"Goi/models"
 	"Goi/pkg/snowflake"
 	"fmt"
@@ -11,10 +12,15 @@ import (
 func CreatePost(p *models.Post) (err error) {
 	// 1. 生成post id
 	p.ID = snowflake.GenID()
-	// 从 c 取到当前发请求的用户的ID
 
 	// 2. 保存到数据库并返回
-	return mysql.CreatePost(p)
+	err = mysql.CreatePost(p)
+	if err != nil {
+		return err
+	}
+	err = redis.CreatePost(p.ID)
+
+	return
 }
 
 func GetPostById(pid int64) (data *models.ApiPostDetail, err error) {
@@ -83,6 +89,60 @@ func GetPostList(offset, limit int64) (data []*models.ApiPostDetail, err error) 
 		}
 		postDetail := &models.ApiPostDetail{
 			AuthorName:      user.Username,
+			Post:            post,
+			CommunityDetail: community,
+		}
+		data = append(data, postDetail)
+	}
+	return data, err
+}
+
+func GetPostList2(p *models.ParamPostList) (data []*models.ApiPostDetail, err error) {
+	// 去 redis 查询 id 列表
+	ids, err := redis.GetPostIDsInOrder(p)
+	if err != nil {
+		return
+	}
+	if len(ids) == 0 {
+		zap.L().Warn("redis.GetPostIDsInOrder(p) return no data")
+	}
+	fmt.Println(ids)
+	// 根据id 去MySQL 数据库查询帖子的详细信息
+	// 返回的数据要根据给定的id顺序返回
+	posts, err := mysql.GetPostListByIdList(ids)
+	if err != nil {
+		return
+	}
+	// 提前查询好每篇帖子的投票数
+	voteData, err := redis.GetPostVoteData(ids)
+	fmt.Println("voteData", voteData)
+	if err != nil {
+		return
+	}
+
+	// 将帖子的作者及分区信息查询出来，填充到帖子中
+	data = make([]*models.ApiPostDetail, 0, len(posts))
+	for index, post := range posts {
+		// 根据作者id查询作者信息
+		user, err := mysql.GetUserById(post.AuthorID)
+		if err != nil {
+			zap.L().Error("mysql.GetUserById(post.AuthorID) failed",
+				zap.Int64("author", post.AuthorID),
+				zap.Error(err))
+			continue
+		}
+
+		// 根据社区id查询社区详细信息
+		community, err := mysql.GetCommunityDetailById(post.CommunityID)
+		if err != nil {
+			zap.L().Error("mysql.GetCommunityDetailById(post.CommunityID) failed",
+				zap.Int64("community", post.CommunityID),
+				zap.Error(err))
+			continue
+		}
+		postDetail := &models.ApiPostDetail{
+			AuthorName:      user.Username,
+			LikeCount:       voteData[index],
 			Post:            post,
 			CommunityDetail: community,
 		}

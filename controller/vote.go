@@ -34,7 +34,10 @@ func PostVoteController(c *gin.Context) {
 	// 具体投票的业务逻辑
 	if err := logic.VoteForPost(userID, p); err != nil {
 		zap.L().Error("logic.VoteForPost() failed", zap.Error(err))
+		ResponseErrorWithMsg(c, CodeServerBusy, err.Error())
+		return
 	}
 	ResponseSuccess(c, nil)
+	return
 
 }
