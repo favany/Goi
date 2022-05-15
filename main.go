@@ -18,9 +18,24 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	_ "Goi/docs"
 )
 
-// Go Web 开发通用脚手架
+// @title Goi
+// @version 1.0
+// @description A forum backend service based on go
+// @termsOfService http://swagger.io/terms/
+
+// @contact.name mophia
+// @contact.url https://mophia.com
+// @contact.email faaa@live.com
+
+// @license.name Apache 2.0
+// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host 127.0.0.1
+// @BasePath /api/v1
 
 func main() {
 	config := "conf/config.yaml"
