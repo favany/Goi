@@ -6,6 +6,7 @@ import (
 	"github.com/go-redis/redis"
 	"go.uber.org/zap"
 	"math"
+	"strconv"
 	"time"
 )
 
@@ -47,7 +48,7 @@ var (
 	ErrVoteRepeat     = errors.New("不允许重复投票")
 )
 
-func CreatePost(postID int64) error {
+func CreatePost(postID, communityID int64) error {
 	pipeline := rdb.TxPipeline()
 	// 帖子时间
 	pipeline.ZAdd(getRedisKey(KeyPostTimeZSet), redis.Z{
@@ -60,6 +61,10 @@ func CreatePost(postID int64) error {
 		Score:  float64(time.Now().Unix()),
 		Member: postID,
 	})
+
+	// 补充：把帖子 id 加到社区的 set
+	communityKey := getRedisKey(KeyCommunitySetPrefix + strconv.Itoa(int(communityID)))
+	pipeline.SAdd(communityKey, postID)
 
 	_, err := pipeline.Exec()
 	if err != nil {

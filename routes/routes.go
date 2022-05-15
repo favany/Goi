@@ -6,6 +6,8 @@ import (
 	"Goi/middlewares"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
+	swaggerfiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 	"net/http"
 )
 
@@ -44,6 +46,8 @@ func Setup() *gin.Engine {
 		// 投票
 		v1.POST("/vote", controller.PostVoteController)
 	}
+
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 
 	return r
 }
